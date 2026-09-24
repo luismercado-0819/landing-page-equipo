@@ -1,41 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Equipo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Tostado</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a nuestra Landing Page</h1>
-        <p class="subtitulo">Un proyecto colaborativo hecho con Git y GitHub</p>
-    </header>
 
-    <main>
-        <section class="tarjeta">
-            <h2>Trabajo en equipo, código en sincronía</h2>
-            <p>Este proyecto fue construido por 4 personas trabajando en ramas independientes y unido en un solo lugar.</p>
-            <button id="saludo">Saludar</button>
-        </section>
+<nav>
+  <div class="logo">Café <span>Tostado</span></div>
+  <ul>
+    <li><a href="#menu">Menú</a></li>
+    <li><a href="#historia">Nosotros</a></li>
+    <li><a href="#visitanos">Visítanos</a></li>
+  </ul>
+</nav>
 
-        <section class="caracteristicas">
-            <div class="caracteristica">
-                <h3>HTML</h3>
-                <p>Estructura semántica y limpia.</p>
-            </div>
-            <div class="caracteristica">
-                <h3>CSS</h3>
-                <p>Diseño moderno y responsivo.</p>
-            </div>
-            <div class="caracteristica">
-                <h3>JavaScript</h3>
-                <p>Interactividad dinámica.</p>
-            </div>
-        </section>
-    </main>
+<section class="hero wrap">
+  <div>
+    <h1>El café que despierta<br>tu barrio.</h1>
+    <p class="lead">Tostamos en pequeños lotes cada semana. Grano de origen único, servido por gente que de verdad le importa cómo te queda la taza.</p>
+    <a href="#menu" class="btn">Ver el menú</a>
+    <a href="#visitanos" class="btn-outline">Cómo llegar</a>
+  </div>
+  <div class="hero-art">
+    <div class="stain"></div>
+    <svg class="cup" width="200" height="220" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 70 H150 L142 175 Q140 195 118 195 H72 Q50 195 48 175 L40 70Z" fill="#2A1A12"/>
+      <path d="M150 85 H172 Q188 85 188 103 Q188 121 172 121 H150" stroke="#2A1A12" stroke-width="9" fill="none"/>
+      <path d="M58 60 Q64 40 55 26" stroke="#7A4E2E" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
+      <path d="M90 60 Q96 38 86 22" stroke="#7A4E2E" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
+      <path d="M122 60 Q128 40 119 26" stroke="#7A4E2E" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
+    </svg>
+  </div>
+</section>
 
-    <footer>
-        <p>Equipo de trabajo &copy; 2026</p>
-    </footer>
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Lo que servimos</h2>
+      <p>Una selección corta, hecha bien. Cambia según la temporada del grano.</p>
+    </div>
+    <div class="menu-columns">
+      <div>
+        <div class="menu-item">
+          <span class="name">Espresso<small>Doble, 18g</small></span>
+          <span class="dots"></span>
+          <span class="price">$3.200</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Cortado<small>Espresso + leche vaporizada</small></span>
+          <span class="dots"></span>
+          <span class="price">$4.500</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Filtrado V60<small>Grano de origen único</small></span>
+          <span class="dots"></span>
+          <span class="price">$5.800</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Café de olla<small>Canela y panela</small></span>
+          <span class="dots"></span>
+          <span class="price">$4.200</span>
+        </div>
+      </div>
+      <div>
+        <div class="menu-item">
+          <span class="name">Croissant<small>Mantequilla, horneado diario</small></span>
+          <span class="dots"></span>
+          <span class="price">$4.800</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Arepa de choclo<small>Con queso campesino</small></span>
+          <span class="dots"></span>
+          <span class="price">$6.500</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Torta de naranja<small>Receta de la casa</small></span>
+          <span class="dots"></span>
+          <span class="price">$5.200</span>
+        </div>
+        <div class="menu-item">
+          <span class="name">Pan de yuca<small>Porción de 3</small></span>
+          <span class="dots"></span>
+          <span class="price">$3.800</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="historia">
+  <p class="quote">"No vendemos café rápido. Vendemos la pausa de diez minutos que te tomas antes de seguir con el día."</p>
+  <p class="attr">— Marcela Ríos, fundadora de Café Tostado</p>
+</section>
+
+<section class="visit" id="visitanos">
+  <div class="wrap visit-grid">
+    <div>
+      <h3>Horario</h3>
+      <div class="hours-row"><span>Lunes a viernes</span><span>7:00 am – 7:00 pm</span></div>
+      <div class="hours-row"><span>Sábados</span><span>8:00 am – 6:00 pm</span></div>
+      <div class="hours-row"><span>Domingos</span><span>8:00 am – 2:00 pm</span></div>
+    </div>
+    <div>
+      <h3>Dirección</h3>
+      <p class="address">Calle 45 #12-30, Cartagena, Bolívar</p>
+      <button class="btn" id="saludo">Reserva tu mesa</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Café Tostado</span>
+  <p>&copy; 2026 Café Tostado. Hecho con cariño de barrio.</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
