@@ -1,104 +1,222 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+  --espresso:#2A1A12;
+  --oat:#F3E7D3;
+  --copper:#B5602F;
+  --copper-light:#D98A5F;
+  --sage:#5B6B45;
+  --coffee:#7A4E2E;
+  --oat-soft:#EADFC7;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Work Sans', sans-serif;
+  background:var(--oat);
+  color:var(--espresso);
+  line-height:1.6;
+}
+h1,h2,h3{
+  font-family:'Fraunces', serif;
+  font-weight:500;
+  line-height:1.1;
+}
+.wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
+
+/* NAV */
+nav{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:28px 32px; max-width:1100px; margin:0 auto;
+}
+.logo{
+  font-family:'Fraunces', serif; font-size:1.3rem; font-weight:600;
+  color:var(--espresso); letter-spacing:0.5px;
+}
+.logo span{ color:var(--copper); }
+nav ul{ display:flex; gap:36px; list-style:none; }
+nav a{ color:var(--coffee); text-decoration:none; font-size:0.95rem; }
+nav a:hover{ color:var(--copper); }
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap:40px;
+  align-items:center;
+  max-width:1100px; margin:0 auto;
+  padding:40px 32px 90px;
+}
+.hero h1{
+  font-size:3.4rem;
+  color:var(--espresso);
+  margin-bottom:22px;
+}
+.hero p.lead{
+  font-size:1.15rem;
+  color:var(--coffee);
+  max-width:440px;
+  margin-bottom:34px;
+}
+.btn{
+  display:inline-block;
+  background:var(--copper);
+  color:var(--oat);
+  padding:15px 34px;
+  border-radius:2px;
+  text-decoration:none;
+  font-size:0.98rem;
+  font-weight:500;
+  border:none;
+  cursor:pointer;
+  transition:background 0.2s ease;
+}
+.btn:hover{ background:#994e24; }
+.btn-outline{
+  display:inline-block;
+  margin-left:16px;
+  padding:15px 30px;
+  border:1px solid var(--coffee);
+  border-radius:2px;
+  color:var(--coffee);
+  text-decoration:none;
+  font-size:0.98rem;
+  background:transparent;
 }
 
-body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background-color: #f4f6f8;
-    color: #2c3e50;
-    line-height: 1.6;
+.hero-art{
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+  height:380px;
+}
+.stain{
+  position:absolute;
+  width:340px; height:340px;
+  background:var(--coffee);
+  border-radius:47% 53% 61% 39% / 45% 41% 59% 55%;
+  opacity:0.15;
+}
+.cup{
+  position:relative; z-index:2;
 }
 
-header {
-    background: linear-gradient(135deg, #2c3e50, #4a69bd);
-    color: white;
-    padding: 80px 20px 100px;
-    text-align: center;
+/* SECTION LABELS */
+.section-head{
+  text-align:left;
+  margin-bottom:44px;
+}
+.section-head h2{
+  font-size:2.1rem;
+  color:var(--espresso);
+}
+.section-head p{
+  color:var(--coffee);
+  margin-top:10px;
+  max-width:480px;
 }
 
-header h1 {
-    font-size: 2.8rem;
-    letter-spacing: -1px;
-    margin-bottom: 12px;
+/* MENU (chalkboard style) */
+.menu{
+  background:var(--espresso);
+  color:var(--oat);
+  padding:90px 0;
+}
+.menu .section-head h2{ color:var(--oat); }
+.menu .section-head p{ color:#C9B79C; }
+.menu-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 70px;
+}
+.menu-item{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  padding:16px 0;
+  border-bottom:1px solid rgba(243,231,211,0.15);
+}
+.menu-item .name{
+  font-family:'Fraunces', serif;
+  font-size:1.15rem;
+  white-space:nowrap;
+}
+.menu-item .name small{
+  display:block;
+  font-family:'Work Sans', sans-serif;
+  font-size:0.82rem;
+  color:#C9B79C;
+  margin-top:3px;
+}
+.menu-item .dots{
+  flex:1;
+  border-bottom:1px dotted rgba(243,231,211,0.35);
+  transform:translateY(-6px);
+}
+.menu-item .price{
+  font-family:'Fraunces', serif;
+  color:var(--copper-light);
+  font-size:1.05rem;
 }
 
-header .subtitulo {
-    font-size: 1.1rem;
-    opacity: 0.85;
+/* ABOUT / PULL QUOTE */
+.about{
+  padding:100px 0;
+  max-width:800px;
+  margin:0 auto;
+  text-align:center;
+}
+.about p.quote{
+  font-family:'Fraunces', serif;
+  font-size:1.8rem;
+  font-weight:400;
+  color:var(--espresso);
+  line-height:1.4;
+}
+.about .attr{
+  margin-top:22px;
+  color:var(--coffee);
+  font-size:0.95rem;
 }
 
-main {
-    max-width: 800px;
-    margin: -60px auto 60px;
-    padding: 0 20px;
+/* VISIT / HOURS */
+.visit{
+  background:var(--oat-soft);
+  padding:80px 0;
+}
+.visit-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+.visit h3{
+  font-size:1.4rem;
+  margin-bottom:18px;
+  color:var(--espresso);
+}
+.hours-row{
+  display:flex; justify-content:space-between;
+  padding:9px 0;
+  border-bottom:1px solid rgba(122,78,46,0.15);
+  color:var(--coffee);
+  font-size:0.95rem;
+}
+.hours-row span:last-child{ color:var(--espresso); font-weight:500; }
+.address{
+  color:var(--coffee);
+  margin-bottom:20px;
 }
 
-.tarjeta {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    padding: 50px 30px;
-    text-align: center;
-    margin-bottom: 40px;
+/* FOOTER */
+footer{
+  background:var(--espresso);
+  color:#C9B79C;
+  padding:50px 32px;
+  text-align:center;
+  font-size:0.9rem;
 }
+footer .logo{ color:var(--oat); margin-bottom:10px; display:block; }
 
-.tarjeta h2 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.tarjeta p {
-    color: #555;
-    margin-bottom: 30px;
-}
-
-button {
-    background: linear-gradient(135deg, #27ae60, #2ecc71);
-    color: white;
-    border: none;
-    padding: 14px 36px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(39,174,96,0.35);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(39,174,96,0.45);
-}
-
-.caracteristicas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-}
-
-.caracteristica {
-    background: white;
-    border-radius: 12px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.caracteristica h3 {
-    color: #4a69bd;
-    margin-bottom: 8px;
-}
-
-.caracteristica p {
-    font-size: 0.95rem;
-    color: #666;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #888;
-    font-size: 0.9rem;
+@media (max-width:760px){
+  .hero{ grid-template-columns:1fr; padding-top:20px; }
+  .hero h1{ font-size:2.4rem; }
+  .hero-art{ order:-1; height:220px; }
+  .menu-columns, .visit-grid{ grid-template-columns:1fr; }
+  nav ul{ display:none; }
 }
